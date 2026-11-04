@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polityka prywatności — Ślad</title>
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root { --bg: #f3f4f6; --card: #ffffff; --line: #e1e4e9; --text: #1b1d22; --muted: #5c6370; --accent: #c94d14; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #121316; --card: #1c1e23; --line: #2a2d34; --text: #e9eaee; --muted: #8d93a0; --accent: #ff7a45; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin: 0 0 24px; }
+    section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 24px; margin-top: 16px; }
+    h2 { margin: 0 0 8px; font-size: 18px; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin: 4px 0; }
+    code { font-size: 14px; }
+    a { color: var(--accent); }
+    footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Polityka prywatności aplikacji Ślad</h1>
+    <p class="sub">Obowiązuje od 4 listopada 2026 r.</p>
+
+    <section>
+      <h2>Najważniejsze</h2>
+      <p>Ślad to aplikacja na Windows do osobistego użytku. <b>Wszystkie dane, które zbiera, są zapisywane wyłącznie na Twoim komputerze.</b> Autor aplikacji nie otrzymuje żadnych Twoich danych. Aplikacja nie zawiera reklam, nie używa narzędzi analitycznych i nie sprzedaje ani nie udostępnia danych nikomu.</p>
+    </section>
+
+    <section>
+      <h2>Jakie dane Ślad zbiera na Twoim komputerze</h2>
+      <ul>
+        <li>listę ostatnio otwieranych plików, którą prowadzi Windows, oraz ich miniatury,</li>
+        <li>historię odwiedzanych stron z przeglądarki Google Chrome (z pominięciem serwisów, które wskażesz),</li>
+        <li>nazwę programu i tytuł okna, które są na wierzchu, oraz czas pracy (można to wyłączyć),</li>
+        <li>zadania, zlecenia i notatki, które sam wpiszesz.</li>
+      </ul>
+      <p>Dane są przechowywane w folderze <code>%APPDATA%\Ślad</code> na Twoim komputerze. Możesz je w każdej chwili usunąć, kasując ten folder.</p>
+    </section>
+
+    <section>
+      <h2>Dane z konta Google</h2>
+      <p>Połączenie z kontem Google jest opcjonalne i wymaga Twojej zgody na stronie Google. Ślad korzysta z interfejsów Google Calendar API i Google Tasks API wyłącznie po to, żeby synchronizować Twoje zadania:</p>
+      <ul>
+        <li><b>kalendarz „Ślad”</b> — aplikacja tworzy go na Twoim koncie i zapisuje w nim zadania i zlecenia z terminem; zmiany wprowadzone w Google wracają do aplikacji,</li>
+        <li><b>pozostałe kalendarze</b> — aplikacja tylko odczytuje wydarzenia, żeby pokazać je w swoim kalendarzu; nie zmienia ich, nie usuwa i nie zapisuje na dysku,</li>
+        <li><b>listy zadań Google</b> — aplikacja odczytuje je i zapisuje zmiany, które wprowadzisz w Ślad (np. odhaczenie zadania).</li>
+      </ul>
+      <p>Dane z Google są przesyłane tylko między Twoim komputerem a serwerami Google. Token dostępu jest zapisany na Twoim komputerze w postaci zaszyfrowanej mechanizmem Windows. Ślad nie używa danych z Google do żadnych innych celów, nie przekazuje ich osobom trzecim i nie używa ich do reklam ani do trenowania modeli sztucznej inteligencji.</p>
+      <p>Sposób korzystania z informacji otrzymanych z interfejsów API Google jest zgodny z <a href="https://developers.google.com/terms/api-services-user-data-policy">Zasadami dotyczącymi danych użytkownika w usługach interfejsów API Google</a>, w tym z wymogami ograniczonego użytkowania (Limited Use).</p>
+    </section>
+
+    <section>
+      <h2>Jak cofnąć dostęp do Google</h2>
+      <ul>
+        <li>w aplikacji: Ustawienia → Kalendarz Google → <b>Rozłącz</b> (unieważnia też token po stronie Google),</li>
+        <li>albo na stronie <a href="https://myaccount.google.com/permissions">uprawnień konta Google</a>.</li>
+      </ul>
+      <p>Kalendarz „Ślad” zostaje wtedy na Twoim koncie Google — możesz go usunąć w ustawieniach Kalendarza Google.</p>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>Pytania dotyczące tej polityki: <a href="https://github.com/tomaszbm-dotcom/slad-strona/issues">zgłoszenie na GitHubie</a>.</p>
+    </section>
+
+    <footer>
+      <a href="index.html">Ślad — strona główna</a>
+    </footer>
+  </main>
+</body>
+</html>

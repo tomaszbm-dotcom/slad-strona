@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ślad — historia pracy</title>
+  <meta name="description" content="Ślad to aplikacja na Windows, która zapamiętuje otwierane pliki, liczy czas pracy i prowadzi zadania. Wszystkie dane zostają na Twoim komputerze." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root { --bg: #f3f4f6; --card: #ffffff; --line: #e1e4e9; --text: #1b1d22; --muted: #5c6370; --accent: #c94d14; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #121316; --card: #1c1e23; --line: #2a2d34; --text: #e9eaee; --muted: #8d93a0; --accent: #ff7a45; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    header img { width: 64px; height: 64px; }
+    h1 { margin: 0; font-size: 32px; }
+    .sub { color: var(--muted); margin: 0; }
+    section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 24px; margin-top: 16px; }
+    h2 { margin: 0 0 8px; font-size: 19px; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin: 4px 0; }
+    a { color: var(--accent); }
+    footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icon.png" alt="" />
+      <div>
+        <h1>Ślad</h1>
+        <p class="sub">historia pracy na Twoim komputerze</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Czym jest Ślad</h2>
+      <p>Ślad to aplikacja na Windows do osobistego użytku. Zapamiętuje, nad czym pracujesz, i pozwala do tego szybko wrócić:</p>
+      <ul>
+        <li><b>historia plików</b> — otwierane pliki ze wszystkich dysków, z miniaturami, filtrami i wyszukiwaniem,</li>
+        <li><b>czas pracy</b> — który program i plik był na wierzchu i jak długo,</li>
+        <li><b>linia czasu i statystyki</b> — dzień godzina po godzinie, czas w programach i projektach,</li>
+        <li><b>zadania i zlecenia</b> — z terminami, przypomnieniami i czasem pracy liczonym automatycznie.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Połączenie z Kalendarzem Google (opcjonalne)</h2>
+      <p>Po wyrażeniu zgody Ślad może synchronizować zadania z Twoim kontem Google:</p>
+      <ul>
+        <li>tworzy osobny kalendarz „Ślad” i zapisuje w nim zadania z terminem,</li>
+        <li>synchronizuje Twoje listy zadań Google (Google Tasks),</li>
+        <li>pokazuje wydarzenia z pozostałych kalendarzy tylko do odczytu.</li>
+      </ul>
+      <p>Połączenie można w każdej chwili wyłączyć w Ustawieniach aplikacji albo na stronie <a href="https://myaccount.google.com/permissions">uprawnień konta Google</a>.</p>
+    </section>
+
+    <section>
+      <h2>Twoje dane</h2>
+      <p>Wszystkie dane Ślad są zapisywane wyłącznie na Twoim komputerze. Aplikacja nie wysyła ich autorowi ani nikomu innemu, nie zawiera reklam ani narzędzi analitycznych. Szczegóły: <a href="polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+    </section>
+
+    <footer>
+      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+    </footer>
+  </main>
+</body>
+</html>
