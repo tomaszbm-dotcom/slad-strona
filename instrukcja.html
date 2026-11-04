@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.9.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.10.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -267,6 +267,7 @@
   <dt>Pomijane programy</dt><dd>Nazwy programów (np. <code>steam</code>), których czas nie jest ani liczony, ani zapisywany. Pod polem widać programy używane dziś.</dd>
   <dt>Powiadomienia o zadaniach</dt><dd>Przypomnienia o godzinie i poranne podsumowanie. Przycisk testowy sprawdza, czy Windows je pokazuje.</dd>
   <dt>Kalendarz Google</dt><dd>Połączenie, synchronizacja i próg pokazywania zrobionych zadań z list Google — patrz <a href="#google">Kalendarz Google</a>.</dd>
+  <dt>Kopie zapasowe</dt><dd>Data ostatniej kopii, drugi folder (np. na Dysku Google), kopia na żądanie, lista kopii i przywracanie — patrz <a href="#data">Dane i prywatność</a>.</dd>
   <dt>Foldery projektów</dt><dd>Foldery główne projektów z propozycjami z historii — patrz <a href="#projects">Projekty i zlecenia</a>.</dd>
   <dt>Strony z Google Chrome</dt><dd>Zapisywanie historii stron ze wszystkich profili Chrome (co kilka minut).</dd>
   <dt>Pomijane serwisy</dt><dd>Adresy (np. <code>mbank.pl</code>, <code>google.com/search</code>), których strony nie są zapisywane ani pokazywane. <b>Przywróć domyślne</b> wraca do listy startowej.</dd>
@@ -301,15 +302,23 @@
   <tbody>
     <tr><td><code>historia.json</code></td><td>historia plików i stron, ustawienia</td></tr>
     <tr><td><code>zadania.json</code></td><td>zadania i zlecenia</td></tr>
-    <tr><td><code>kopie-zadan\</code></td><td>codzienna kopia zadań z ostatnich 14 dni</td></tr>
+    <tr><td><code>kopie\</code></td><td>kopie zapasowe (pliki <code>Ślad-kopia-….zip</code>)</td></tr>
     <tr><td><code>aktywnosc\RRRR-MM.json</code></td><td>czas pracy (jeden plik na miesiąc)</td></tr>
     <tr><td><code>miniatury\</code></td><td>miniatury plików, ikony stron i programów</td></tr>
     <tr><td><code>google.json</code></td><td>połączenie z Google (token zaszyfrowany mechanizmem Windows)</td></tr>
   </tbody>
 </table>
 
-<h3>Kopia zapasowa</h3>
-<p>Zamknij Ślad i skopiuj cały folder <code>%APPDATA%\Ślad</code> w bezpieczne miejsce. Przywrócenie: zamknij Ślad i wstaw folder z powrotem.</p>
+<h3>Kopie zapasowe</h3>
+<p>Ślad sam robi kopię <b>raz dziennie</b> (minutę po pierwszym uruchomieniu w danym dniu) i <b>przed każdą aktualizacją</b> do nowej wersji. Kopia to jeden plik <code>.zip</code> z historią, zadaniami i czasem pracy — Windows otwiera go jak zwykły folder. Nie ma w niej miniatur (Ślad odtworzy je sam) ani połączenia z Google (po przywróceniu wystarczy kliknąć <i>Połącz z Google</i>).</p>
+<p>Zostają kopie z <b>7 ostatnich dni, 4 tygodni i 12 miesięcy</b> — ok. 20 plików po mniej niż 1 MB. Starsze usuwają się same.</p>
+<p>Wszystko w <i>Ustawienia → Kopie zapasowe</i>:</p>
+<ul>
+  <li><b>Drugi folder</b> — kopia trafia też tam. Wybierz folder na <b>Dysku Google</b> (przycisk <i>Użyj Dysku Google</i>) albo w OneDrive, a program do synchronizacji sam wyśle ją do Twojej chmury. Po awarii komputera dane da się odzyskać. Ślad niczego nie wysyła sam.</li>
+  <li><b>Zrób kopię teraz</b> — np. przed większymi porządkami.</li>
+  <li><b>Przywróć…</b> przy kopii z listy albo <b>Przywróć z pliku…</b> (np. na nowym komputerze, z folderu na Dysku Google). Przed przywróceniem Ślad zapisuje obecny stan w kopii „przed przywróceniem”, więc to da się cofnąć. Potem uruchamia się ponownie.</li>
+</ul>
+<p>Gdy kopia się nie uda (np. drugi folder jest niedostępny), w Ustawieniach pojawi się żółte ostrzeżenie.</p>
 <h3>Usunięcie danych</h3>
 <p>Zamknij Ślad i usuń folder <code>%APPDATA%\Ślad</code>. Jeśli łączyłeś Google: najpierw <i>Ustawienia → Kalendarz Google → Rozłącz</i>, a kalendarz „Ślad” usuń w ustawieniach Kalendarza Google.</p>
 <p>Pełna treść: <a href="https://tomaszbm-dotcom.github.io/slad-strona/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
@@ -354,7 +363,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.9.0</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.10.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
