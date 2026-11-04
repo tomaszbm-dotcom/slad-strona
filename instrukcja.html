@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.8.1 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.9.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -57,6 +57,7 @@
         <li><a href="#tasks">Zadania i zlecenia</a></li>
         <li><a href="#projects">Projekty i zlecenia</a></li>
         <li><a href="#google">Kalendarz Google</a></li>
+        <li><a href="#quick">Szybkie wyszukiwanie</a></li>
         <li><a href="#settings">Ustawienia</a></li>
         <li><a href="#shortcuts">Skróty klawiszowe</a></li>
         <li><a href="#data">Dane i prywatność</a></li>
@@ -84,6 +85,7 @@
   <li><a href="#tasks">Zadania</a> <kbd>Ctrl</kbd>+<kbd>4</kbd> — zadania i zlecenia z terminami.</li>
 </ul>
 <p>Pod przełącznikiem widać, ile czasu pracowałeś dziś i co jest teraz liczone.</p>
+<p>Z dowolnego programu plik, dokument albo zadanie znajdziesz skrótem <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd> — patrz <a href="#quick">Szybkie wyszukiwanie</a>. Zamknięcie okna chowa Ślad do ikony obok zegara, a czas liczy się dalej.</p>
 </section>
 
 <section id="files">
@@ -223,11 +225,43 @@
 <p>Synchronizacja odbywa się od razu po zmianie w Ślad i co 5 minut. Wskaźnik <b>„Google ✓ 14:05”</b> w widoku Zadania pokazuje stan; kliknięcie synchronizuje od razu.</p>
 </section>
 
+<section id="quick">
+<h2>Szybkie wyszukiwanie</h2>
+<p>Skrót <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd> otwiera okno wyszukiwania nad dowolnym programem — nie trzeba przełączać się do Ślad. Wpisz kilka liter, <kbd>Enter</kbd> otwiera wynik, a okno znika. <kbd>Esc</kbd> albo kliknięcie obok też je chowa.</p>
+<h3>Co można znaleźć</h3>
+<ul>
+  <li><b>Pliki</b> (po nazwie, ścieżce i dysku), <b>Dokumenty Google</b>, <b>zadania i zlecenia</b>, <b>klientów</b> i <b>strony www</b> (niżej w wynikach).</li>
+  <li><b>Polecenia</b>, np. „Nowe zadanie”, „Linia czasu: wczoraj”, „Statystyki”, „Ustawienia”, „Pomoc”, „Synchronizuj z Kalendarzem Google”.</li>
+</ul>
+<p>Bez wpisanego tekstu okno pokazuje <b>ostatnio używane</b> pliki i dokumenty. Wyniki są ułożone tak, że wyżej jest to, co otwierasz często, niedawno i nad czym długo pracowałeś.</p>
+<div class="tip">Polskie znaki nie są potrzebne („zolc” znajdzie „żółć”), a wystarczą litery w kolejności: „etkrt” znajdzie „ETUINAKARTE”.</div>
+<h3>Klawisze w oknie wyszukiwania</h3>
+<table class="help-keys">
+  <tbody>
+    <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>wybór wyniku</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>otwórz plik, dokument lub stronę; zadanie i polecenie otwierają się w Ślad</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td><td>pokaż plik w folderze</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>kopiuj ścieżkę albo adres (gdy w polu nic nie jest zaznaczone)</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>zamknij</td></tr>
+  </tbody>
+</table>
+<h3>Szybkie dodawanie zadania</h3>
+<p>Zacznij od <b>„+”</b>, np. <b>„+ zadzwonić do Bogumiła w piątek 10:00”</b>. Ślad rozpozna termin i pokaże podgląd, <kbd>Enter</kbd> doda zadanie (z przypomnieniem, a przy połączeniu z Google — także w kalendarzu).</p>
+<ul>
+  <li>daty: <i>dziś, jutro, pojutrze, w poniedziałek… w niedzielę, do piątku, 12.11, 12.11.2027, 12 listopada</i>,</li>
+  <li>godziny: <i>10:00, o 10, o 9:30, godz. 8</i>.</li>
+</ul>
+<div class="tip">Zapis „1:35” czy „1:72” to skala modelu, nie godzina — zostaje w tytule. Godzinę pierwszą wpisz jako „o 1:30”.</div>
+<h3>Działanie w tle i ikona obok zegara</h3>
+<p>Zamknięcie okna Ślad chowa je do <b>zasobnika systemowego</b> (ikona obok zegara) — czas pracy liczy się dalej, a skrót wyszukiwania działa. Kliknięcie ikony otwiera Ślad; <b>prawy przycisk → Zakończ</b> wyłącza aplikację. Można to zmienić w <i>Ustawieniach → Szybkie wyszukiwanie</i>, gdzie zmienisz też skrót (jeśli jest zajęty przez inny program, Ślad o tym powie).</p>
+</section>
+
 <section id="settings">
 <h2>Ustawienia</h2>
 <p>Ustawienia otwiera koło zębate na dole panelu bocznego albo <kbd>Ctrl</kbd>+<kbd>,</kbd>. Zmiany wyglądu widać od razu; <b>Zapisz</b> je utrwala, a <b>Anuluj</b> lub <kbd>Esc</kbd> przywraca poprzedni wygląd.</p>
 <dl>
   <dt>Wygląd</dt><dd>Motyw ciemny, jasny albo jak w Windows; jeden z 6 kolorów akcentu; rozmiar miniatur.</dd>
+  <dt>Szybkie wyszukiwanie</dt><dd>Skrót otwierający wyszukiwanie z dowolnego programu (domyślnie <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd>) i działanie w tle po zamknięciu okna — patrz <a href="#quick">Szybkie wyszukiwanie</a>.</dd>
   <dt>Śledź aktywne okno</dt><dd>Co 5 sekund sprawdza, który program i plik jest na wierzchu. Po 2 minutach bez ruchu myszy i klawiatury, przy zablokowanym ekranie i podczas uśpienia czas się nie liczy. Okno samego Ślad nie jest liczone.</dd>
   <dt>Pomijane programy</dt><dd>Nazwy programów (np. <code>steam</code>), których czas nie jest ani liczony, ani zapisywany. Pod polem widać programy używane dziś.</dd>
   <dt>Powiadomienia o zadaniach</dt><dd>Przypomnienia o godzinie i poranne podsumowanie. Przycisk testowy sprawdza, czy Windows je pokazuje.</dd>
@@ -243,6 +277,7 @@
 <h2>Skróty klawiszowe</h2>
 <table class="help-keys">
   <tbody>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd></td><td><a href="#quick">Szybkie wyszukiwanie</a> — z dowolnego programu (skrót można zmienić)</td></tr>
     <tr><td><kbd>F1</kbd></td><td>Pomoc (otwiera rozdział bieżącego widoku)</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>4</kbd></td><td>Pliki, Linia czasu, Statystyki, Zadania</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Szukaj w plikach</td></tr>
@@ -318,7 +353,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.8.1</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.9.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
