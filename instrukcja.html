@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instrukcja obsługi — Ślad</title>
+  <meta name="description" content="Instrukcja obsługi aplikacji Ślad: historia plików, linia czasu, statystyki, zadania i Kalendarz Google." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root { --bg: #f3f4f6; --card: #ffffff; --line: #e1e4e9; --text: #1b1d22; --text-2: #353a44; --muted: #5c6370; --accent: #c94d14; --code: #eceef2; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #121316; --card: #1c1e23; --line: #2a2d34; --text: #e9eaee; --text-2: #c6c9d1; --muted: #8d93a0; --accent: #ff7a45; --code: #26292f; } }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text-2); font: 16px/1.65 "Segoe UI", system-ui, sans-serif; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 16px 64px; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; }
+    header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; }
+    header img { width: 52px; height: 52px; }
+    header h1 { margin: 0; font-size: 28px; color: var(--text); }
+    header p { margin: 0; color: var(--muted); }
+    nav { position: sticky; top: 16px; align-self: start; }
+    nav ul { list-style: none; margin: 0; padding: 0; }
+    nav a { display: block; padding: 6px 10px; border-radius: 7px; color: var(--text-2); text-decoration: none; }
+    nav a:hover { background: var(--card); color: var(--text); }
+    section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 26px; margin-bottom: 16px; scroll-margin-top: 16px; }
+    h2 { margin: 0 0 10px; font-size: 22px; color: var(--text); }
+    h3 { margin: 22px 0 6px; font-size: 17px; color: var(--text); }
+    b, dt { color: var(--text); }
+    a { color: var(--accent); }
+    code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+    kbd { display: inline-block; min-width: 22px; padding: 0 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; background: var(--bg); color: var(--text); font: 13px/1.6 "Segoe UI", system-ui, sans-serif; text-align: center; }
+    .tip { margin: 14px 0; padding: 10px 14px; border-radius: 9px; border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); background: color-mix(in srgb, var(--accent) 9%, transparent); color: var(--text); }
+    table { border-collapse: collapse; width: 100%; }
+    td { padding: 7px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+    tr:first-child td { border-top: 0; }
+    td:first-child { white-space: nowrap; width: 1%; padding-right: 18px; }
+    dt { font-weight: 600; margin-top: 12px; }
+    dd { margin: 2px 0 0; }
+    footer { grid-column: 1 / -1; color: var(--muted); font-size: 14px; }
+    @media (max-width: 760px) { .wrap { grid-template-columns: minmax(0, 1fr); } nav { position: static; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icon.png" alt="" />
+      <div>
+        <h1>Instrukcja obsługi Ślad</h1>
+        <p>wersja 0.7.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#start">Pierwsze kroki</a></li>
+        <li><a href="#files">Pliki</a></li>
+        <li><a href="#timeline">Linia czasu</a></li>
+        <li><a href="#stats">Statystyki</a></li>
+        <li><a href="#tasks">Zadania i zlecenia</a></li>
+        <li><a href="#projects">Projekty i zlecenia</a></li>
+        <li><a href="#google">Kalendarz Google</a></li>
+        <li><a href="#settings">Ustawienia</a></li>
+        <li><a href="#shortcuts">Skróty klawiszowe</a></li>
+        <li><a href="#data">Dane i prywatność</a></li>
+        <li><a href="#problems">Rozwiązywanie problemów</a></li>
+        <li><a href="#about">O programie</a></li>
+      </ul>
+    </nav>
+    <main>
+<section id="start">
+<h2>Pierwsze kroki</h2>
+<p><b>Ślad</b> zapamiętuje, nad czym pracujesz na komputerze, i pozwala do tego szybko wrócić. Zbiera historię otwieranych plików i stron, liczy czas pracy w programach i nad plikami oraz prowadzi zadania i zlecenia. Wszystkie dane zostają na Twoim komputerze.</p>
+<h3>Co ustawić na początek</h3>
+<ol>
+  <li><b>Lista ostatnich plików w Windows.</b> Ślad czyta listę, którą prowadzi Windows. Upewnij się, że jest włączona: <i>Ustawienia Windows → Personalizacja → Start → „Pokaż ostatnio otwierane elementy…”</i>.</li>
+  <li><b>Uruchamianie z Windows.</b> Czas pracy liczy się tylko wtedy, gdy Ślad działa. Włącz przełącznik <b>„Uruchamiaj z Windows”</b> na dole panelu bocznego.</li>
+  <li><b>Foldery projektów.</b> Jeśli trzymasz pracę w folderach klientów lub projektów, wskaż je w <i>Ustawieniach → Foldery projektów</i>. Ślad zacznie liczyć czas na projekty i proponować zlecenia.</li>
+  <li><b>Kalendarz Google (opcjonalnie).</b> Zadania z terminem mogą trafiać do Kalendarza Google i telefonu — patrz rozdział <a href="#google">Kalendarz Google</a>.</li>
+</ol>
+<h3>Widoki</h3>
+<p>Przełącznik u góry panelu bocznego prowadzi do czterech widoków:</p>
+<ul>
+  <li><a href="#files">Pliki</a> <kbd>Ctrl</kbd>+<kbd>1</kbd> — historia plików i stron,</li>
+  <li><a href="#timeline">Linia czasu</a> <kbd>Ctrl</kbd>+<kbd>2</kbd> — jeden dzień godzina po godzinie,</li>
+  <li><a href="#stats">Statystyki</a> <kbd>Ctrl</kbd>+<kbd>3</kbd> — czas w programach, projektach, dniach i godzinach,</li>
+  <li><a href="#tasks">Zadania</a> <kbd>Ctrl</kbd>+<kbd>4</kbd> — zadania i zlecenia z terminami.</li>
+</ul>
+<p>Pod przełącznikiem widać, ile czasu pracowałeś dziś i co jest teraz liczone.</p>
+</section>
+
+<section id="files">
+<h2>Pliki</h2>
+<p>Widok <b>Pliki</b> pokazuje historię otwieranych plików ze wszystkich dysków (także zewnętrznych) oraz odwiedzanych stron z Google Chrome, pogrupowaną po dniach.</p>
+<h3>Filtrowanie i wyszukiwanie</h3>
+<ul>
+  <li><b>Kiedy</b> — dziś, 7 dni, 30 dni albo wszystko.</li>
+  <li><b>Rodzaj</b> — SketchUp, CorelDRAW, Photoshop, kod, obrazy, dokumenty, strony www i inne. Przy „Strony www” pojawia się dodatkowo lista serwisów.</li>
+  <li><b>Dyski</b> — zielona kropka oznacza dysk podłączony. Ikoną ✎ nadasz dyskowi własną nazwę.</li>
+  <li><b>Szukaj</b> (<kbd>Ctrl</kbd>+<kbd>F</kbd>) — po nazwie, ścieżce i adresie. Kilka słów naraz zawęża wynik. <kbd>Esc</kbd> czyści pole.</li>
+  <li><b>Sortowanie</b> — ostatnio otwierane, najczęściej otwierane, najdłużej używane albo nazwa.</li>
+</ul>
+<h3>Karty plików</h3>
+<p>Dwuklik otwiera plik w domyślnym programie albo stronę w przeglądarce. Po najechaniu na kartę pojawiają się przyciski: <b>Otwórz</b>, <b>Pokaż w folderze</b>, <b>Przypnij</b> (★, przypięte są zawsze na górze), <b>Kopiuj ścieżkę</b> i <b>Usuń z historii</b> (plik wróci, gdy znów go otworzysz).</p>
+<p>Przy pliku, nad którym pracowałeś, widać łączny czas pracy, np. <b>⏱ 2 h 15 min</b>.</p>
+<ul>
+  <li><b>„Podłącz: …”</b> — plik leży na odłączonym dysku. Ślad rozpoznaje dysk po numerze seryjnym, więc zadziała także wtedy, gdy dysk dostanie inną literę.</li>
+  <li><b>„Plik przeniesiony lub usunięty”</b> — pliku nie ma już w zapamiętanym miejscu.</li>
+</ul>
+<h3>Widok i miniatury</h3>
+<p>Przyciskami w prawym górnym rogu przełączasz siatkę i listę. Rozmiar miniatur zmienisz w <i>Ustawieniach → Wygląd</i> albo kółkiem myszy z wciśniętym <kbd>Ctrl</kbd> nad siatką.</p>
+<div class="tip">Miniatury są zapisywane lokalnie, więc widać je także przy odłączonym dysku.</div>
+</section>
+
+<section id="timeline">
+<h2>Linia czasu</h2>
+<p><b>Linia czasu</b> pokazuje jeden dzień godzina po godzinie: w jakich programach pracowałeś, które pliki otwierałeś i jakie strony odwiedzałeś.</p>
+<h3>Jak czytać dzień</h3>
+<ul>
+  <li><b>Pasek całego dnia</b> u góry — kolorowe odcinki to programy na wierzchu ekranu. Kliknięcie w pasek przewija do tej godziny.</li>
+  <li><b>Wiersz godziny</b> — pasek 60 minut i pod nim grupy: <b>Praca</b> (pliki ze zliczonym czasem), <b>Otwarte</b> (pliki otwarte w tej godzinie), <b>Strony</b> (najczęstsze, strony o tym samym tytule połączone) i <b>Programy</b> (czas bez rozpoznanego pliku). Na listach są pozycje od 1 minuty.</li>
+  <li><b>Najechanie</b> na odcinek pokazuje program, tytuł okna i czas. <b>Kliknięcie paska godziny</b> rozwija listę kolejnych okien.</li>
+  <li>Puste godziny są łączone w jeden wiersz „brak aktywności”.</li>
+  <li>Nad dniem widać <b>Terminy</b> zadań oraz wydarzenia z Twoich kalendarzy Google.</li>
+</ul>
+<h3>Zmiana dnia</h3>
+<p>Strzałki ‹ › w nagłówku albo klawisze <kbd>←</kbd> <kbd>→</kbd>. Przycisk <b>Dziś</b> wraca do bieżącego dnia. W kalendarzu w panelu bocznym im ciemniejszy dzień, tym dłużej pracowałeś; czerwona kropka oznacza termin zadania.</p>
+<p>Lista <b>Programy tego dnia</b> pokazuje łączny czas każdego programu. Kliknięcie programu wyróżnia jego odcinki na pasku.</p>
+<div class="tip">Dni sprzed włączenia śledzenia okien pokazują same otwarte pliki i strony.</div>
+</section>
+
+<section id="stats">
+<h2>Statystyki</h2>
+<p><b>Statystyki</b> podsumowują wybrany okres. U góry wybierasz <b>zakres</b> (7 dni, 30 dni, 90 dni, rok, wszystko) i <b>miarę</b>:</p>
+<ul>
+  <li><b>Czas pracy</b> — z dziennika aktywnych okien,</li>
+  <li><b>Otwarcia plików</b> — z historii plików; działa na całej historii, także sprzed włączenia śledzenia czasu.</li>
+</ul>
+<h3>Wykresy</h3>
+<ul>
+  <li><b>Kafelki</b> — łącznie, średnio na dzień pracy, najdłuższy dzień, liczba dni z pracą.</li>
+  <li><b>Programy</b> (przy otwarciach: <b>Rodzaje plików</b>) i <b>Projekty</b>. Kliknięcie projektu pokazuje jego zlecenia i pliki.</li>
+  <li><b>Dzień po dniu</b> — przy roku i „wszystko” tydzień po tygodniu. Kliknięcie słupka otwiera ten dzień na linii czasu.</li>
+  <li><b>Dni tygodnia</b> i <b>Godziny</b> — średnio na jeden dzień, oraz mapa cieplna <b>Kiedy pracujesz</b> (dzień tygodnia × godzina).</li>
+</ul>
+<p>Najechanie na słupek albo komórkę (także klawiszem <kbd>Tab</kbd>) pokazuje dokładną wartość. Przycisk <b>Tabela</b> przy każdym wykresie pokazuje te same liczby w tabeli.</p>
+<div class="tip">Projekty pojawiają się po wskazaniu folderów projektów w <i>Ustawieniach</i> — patrz <a href="#projects">Projekty i zlecenia</a>.</div>
+</section>
+
+<section id="tasks">
+<h2>Zadania i zlecenia</h2>
+<p>Widok <b>Zadania</b> łączy dwa rodzaje pozycji:</p>
+<ul>
+  <li><b>Zlecenie</b> — powstaje z folderu projektu (np. <code>TOSIR\ETUI_NA_KARTE</code>); czas pracy liczy się sam, z plików otwieranych w tym folderze,</li>
+  <li><b>Zadanie</b> — wszystko inne, np. „zadzwonić do klienta”, z terminem i przypomnieniem.</li>
+</ul>
+<h3>Dodawanie</h3>
+<p><b>+ Zadanie</b> (<kbd>Ctrl</kbd>+<kbd>N</kbd>) otwiera wiersz u góry: wpisz tytuł, opcjonalnie datę i godzinę, <kbd>Enter</kbd> dodaje, <kbd>Esc</kbd> zamyka. W widoku <b>Miesiąc</b> przycisk <b>+</b> w dniu dodaje zadanie na ten dzień.</p>
+<p>Zlecenia Ślad proponuje sam w sekcji <b>Nowe zlecenia z folderów</b> — kliknij <b>Dodaj</b> albo <b>Pomiń</b> (pominięte nie wracają).</p>
+<h3>Lista i miesiąc</h3>
+<p>Lista grupuje pozycje: po terminie, dziś, jutro, w tym tygodniu, później, bez terminu. Kółko przy zadaniu je odhacza. <b>Pokaż zrobione</b> dołącza zrobione i oddane. Czerwony licznik przy przycisku „Zadania” to terminy na dziś i po terminie.</p>
+<h3>Szczegóły</h3>
+<p>Kliknięcie pozycji otwiera panel z prawej (<kbd>Esc</kbd> zamyka). Wszystko zapisuje się od razu.</p>
+<ul>
+  <li><b>Status</b> zlecenia: do zrobienia, w trakcie, oddane.</li>
+  <li><b>Termin</b>; przy zadaniu także godzina i <b>Przypomnij</b> (powiadomienie Windows).</li>
+  <li><b>Szacunek</b> i <b>Przepracowane</b> — pasek pokazuje, ile czasu z szacunku już zużyto; po przekroczeniu zmienia kolor.</li>
+  <li><b>Przypięte do</b> — zadanie można przypiąć do zlecenia lub klienta.</li>
+  <li><b>Lista punktów</b>, <b>Notatka</b>, <b>Pliki</b> zlecenia i <b>Otwórz folder</b>.</li>
+  <li><b>Usuń</b> — wymaga drugiego kliknięcia. Usunięte zlecenie nie wraca jako propozycja.</li>
+</ul>
+<h3>Wycena i klienci</h3>
+<p>Przy szacunku Ślad podpowiada, ile zajmowały oddane zlecenia tego samego klienta. W panelu bocznym przy kliencie przycisk <b>Σ</b> pokazuje czas pracy dla klienta w wybranym miesiącu, z przyciskiem <b>Kopiuj jako tekst</b> — do wyceny albo rozliczenia.</p>
+<h3>Przypomnienia</h3>
+<p>Ślad pokazuje powiadomienie Windows o godzinie przypomnienia oraz rano krótkie podsumowanie terminów. Działa to, gdy Ślad jest uruchomiony. Z Kalendarzem Google przypomnienie trafia też do telefonu.</p>
+</section>
+
+<section id="projects">
+<h2>Projekty i zlecenia</h2>
+<p>Ślad wyznacza projekty z <b>folderów głównych</b>, które wskażesz w <i>Ustawieniach → Foldery projektów</i>.</p>
+<ul>
+  <li><b>Projektem</b> (klientem) jest pierwszy podfolder folderu głównego, a <b>zleceniem</b> — drugi.</li>
+  <li>Przykład: folder główny <code>…\_SKETCHUP_ZLECENIA</code>, plik <code>…\_SKETCHUP_ZLECENIA\TOSIR\ETUI_NA_KARTE\etui.skp</code> → projekt <b>TOSIR</b>, zlecenie <b>ETUI_NA_KARTE</b>.</li>
+  <li>Pliki spoza folderów głównych trafiają do „Bez projektu”.</li>
+  <li>Litera dysku nie ma znaczenia — dysk zewnętrzny może dostać inną literę.</li>
+</ul>
+<p>W Ustawieniach Ślad <b>podpowiada kandydatów</b> z historii — foldery, w których kilka podfolderów zawiera otwierane pliki. Kliknięcie propozycji dodaje folder; <b>Dodaj folder…</b> pozwala wskazać dowolny.</p>
+<div class="tip">Czas trafia do pliku (i projektu), gdy nazwa pliku z historii jest w tytule okna programu. Większość programów tak robi; wyjątki opisuje <a href="#problems">Rozwiązywanie problemów</a>.</div>
+</section>
+
+<section id="google">
+<h2>Kalendarz Google</h2>
+<p>Połączenie z kontem Google jest opcjonalne. Po połączeniu:</p>
+<ul>
+  <li>zadania i zlecenia z terminem trafiają do <b>osobnego kalendarza „Ślad”</b> — bez godziny jako wydarzenie całodniowe, z godziną jako 30-minutowe; zrobione zostają z „✓” przed tytułem,</li>
+  <li><b>w obie strony</b> — przesunięcie, zmiana tytułu albo dopisanie „✓” w Google wraca do Ślad; nowe wydarzenie dodane w Google do kalendarza „Ślad” staje się zadaniem; przy konflikcie wygrywa nowsza zmiana,</li>
+  <li><b>listy zadań Google</b> (zadania z kółeczkiem w kalendarzu) pojawiają się w Ślad ze znaczkiem listy ☑ i też synchronizują się w obie strony,</li>
+  <li><b>pozostałe kalendarze</b> są widoczne tylko do odczytu — w widoku Miesiąc i na linii czasu,</li>
+  <li>przypomnienie ze Ślad ustawia powiadomienie w wydarzeniu, więc przypomni też telefon.</li>
+</ul>
+<h3>Konfiguracja (jednorazowo)</h3>
+<ol>
+  <li>Otwórz <code>console.cloud.google.com</code> i utwórz nowy projekt, np. „Slad”.</li>
+  <li><b>Interfejsy API i usługi → Biblioteka</b>: włącz <b>Google Calendar API</b> i <b>Google Tasks API</b>.</li>
+  <li><b>Platforma uwierzytelniania Google</b>: w <b>Elementach marki</b> podaj nazwę i e-mail; w <b>Odbiorcach</b> wybierz „Z zewnątrz”.</li>
+  <li><b>Klienty → Utwórz klienta</b>, typ <b>Aplikacja komputerowa</b>. Skopiuj identyfikator i tajny klucz do <i>Ustawień → Kalendarz Google</i>.</li>
+  <li>Kliknij <b>Połącz z Google</b>. Google pokaże „aplikacja niezweryfikowana” — przy aplikacji na własny użytek to normalne: <b>Zaawansowane → Przejdź do…</b>, zaznacz wszystkie zgody.</li>
+</ol>
+<div class="tip">Dopóki projekt w Google jest w stanie „Testowanie”, Google co 7 dni cofa dostęp i trzeba połączyć się ponownie. Po publikacji aplikacji (wymaga strony głównej i polityki prywatności) dostęp nie wygasa.</div>
+<h3>Ważne zasady i ograniczenia</h3>
+<ul>
+  <li>Usunięcie wydarzenia w Google <b>nie usuwa zadania</b> — zadanie traci tylko termin (notatki i punkty nie przepadają).</li>
+  <li>Zadanie z listy Google usunięte w Google znika też w Ślad.</li>
+  <li>Google Tasks przekazuje <b>tylko datę</b> zadania — godzina nie przechodzi w żadną stronę.</li>
+  <li>Zadania cykliczne z Google Tasks są widoczne tylko jako jedno wystąpienie. Rzeczy powtarzalne lepiej zapisywać jako powtarzające się wydarzenia w kalendarzu.</li>
+  <li>Zadania z list Google zrobione dawniej niż wybrany próg (domyślnie 30 dni) nie są pokazywane w Ślad — w Google zostają bez zmian.</li>
+</ul>
+<p>Synchronizacja odbywa się od razu po zmianie w Ślad i co 5 minut. Wskaźnik <b>„Google ✓ 14:05”</b> w widoku Zadania pokazuje stan; kliknięcie synchronizuje od razu.</p>
+</section>
+
+<section id="settings">
+<h2>Ustawienia</h2>
+<p>Ustawienia otwiera koło zębate na dole panelu bocznego albo <kbd>Ctrl</kbd>+<kbd>,</kbd>. Zmiany wyglądu widać od razu; <b>Zapisz</b> je utrwala, a <b>Anuluj</b> lub <kbd>Esc</kbd> przywraca poprzedni wygląd.</p>
+<dl>
+  <dt>Wygląd</dt><dd>Motyw ciemny, jasny albo jak w Windows; jeden z 6 kolorów akcentu; rozmiar miniatur.</dd>
+  <dt>Śledź aktywne okno</dt><dd>Co 5 sekund sprawdza, który program i plik jest na wierzchu. Po 2 minutach bez ruchu myszy i klawiatury, przy zablokowanym ekranie i podczas uśpienia czas się nie liczy. Okno samego Ślad nie jest liczone.</dd>
+  <dt>Pomijane programy</dt><dd>Nazwy programów (np. <code>steam</code>), których czas nie jest ani liczony, ani zapisywany. Pod polem widać programy używane dziś.</dd>
+  <dt>Powiadomienia o zadaniach</dt><dd>Przypomnienia o godzinie i poranne podsumowanie. Przycisk testowy sprawdza, czy Windows je pokazuje.</dd>
+  <dt>Kalendarz Google</dt><dd>Połączenie, synchronizacja i próg pokazywania zrobionych zadań z list Google — patrz <a href="#google">Kalendarz Google</a>.</dd>
+  <dt>Foldery projektów</dt><dd>Foldery główne projektów z propozycjami z historii — patrz <a href="#projects">Projekty i zlecenia</a>.</dd>
+  <dt>Strony z Google Chrome</dt><dd>Zapisywanie historii stron ze wszystkich profili Chrome (co kilka minut).</dd>
+  <dt>Pomijane serwisy</dt><dd>Adresy (np. <code>mbank.pl</code>, <code>google.com/search</code>), których strony nie są zapisywane ani pokazywane. <b>Przywróć domyślne</b> wraca do listy startowej.</dd>
+</dl>
+<p>Przełącznik <b>Uruchamiaj z Windows</b> jest na dole panelu bocznego, a przycisk <b>Odśwież teraz</b> od razu sprawdza nowe pliki, dyski i strony.</p>
+</section>
+
+<section id="shortcuts">
+<h2>Skróty klawiszowe</h2>
+<table class="help-keys">
+  <tbody>
+    <tr><td><kbd>F1</kbd></td><td>Pomoc (otwiera rozdział bieżącego widoku)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>4</kbd></td><td>Pliki, Linia czasu, Statystyki, Zadania</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Szukaj w plikach</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td>Nowe zadanie</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>,</kbd></td><td>Ustawienia</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Zamknij okno lub panel, wyczyść wyszukiwanie</td></tr>
+    <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Poprzedni / następny dzień na linii czasu</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Dodaj zadanie (w wierszu dodawania), otwórz zaznaczone zadanie</td></tr>
+    <tr><td><kbd>Ctrl</kbd> + kółko myszy</td><td>Rozmiar miniatur w siatce plików</td></tr>
+    <tr><td><kbd>Tab</kbd></td><td>Przechodzenie po słupkach wykresów z podpowiedzią wartości</td></tr>
+    <tr><td>Dwuklik</td><td>Otwórz plik lub stronę</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section id="data">
+<h2>Dane i prywatność</h2>
+<p>Wszystkie dane Ślad są zapisywane <b>wyłącznie na Twoim komputerze</b>, w folderze <code>%APPDATA%\Ślad</code>. Aplikacja nie wysyła ich autorowi ani nikomu innemu, nie ma reklam ani narzędzi analitycznych.</p>
+<table class="help-keys">
+  <tbody>
+    <tr><td><code>historia.json</code></td><td>historia plików i stron, ustawienia</td></tr>
+    <tr><td><code>zadania.json</code></td><td>zadania i zlecenia</td></tr>
+    <tr><td><code>kopie-zadan\</code></td><td>codzienna kopia zadań z ostatnich 14 dni</td></tr>
+    <tr><td><code>aktywnosc\RRRR-MM.json</code></td><td>czas pracy (jeden plik na miesiąc)</td></tr>
+    <tr><td><code>miniatury\</code></td><td>miniatury plików, ikony stron i programów</td></tr>
+    <tr><td><code>google.json</code></td><td>połączenie z Google (token zaszyfrowany mechanizmem Windows)</td></tr>
+  </tbody>
+</table>
+
+<h3>Kopia zapasowa</h3>
+<p>Zamknij Ślad i skopiuj cały folder <code>%APPDATA%\Ślad</code> w bezpieczne miejsce. Przywrócenie: zamknij Ślad i wstaw folder z powrotem.</p>
+<h3>Usunięcie danych</h3>
+<p>Zamknij Ślad i usuń folder <code>%APPDATA%\Ślad</code>. Jeśli łączyłeś Google: najpierw <i>Ustawienia → Kalendarz Google → Rozłącz</i>, a kalendarz „Ślad” usuń w ustawieniach Kalendarza Google.</p>
+<p>Pełna treść: <a href="https://tomaszbm-dotcom.github.io/slad-strona/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+</section>
+
+<section id="problems">
+<h2>Rozwiązywanie problemów</h2>
+<h3>Historia plików jest pusta albo brakuje plików</h3>
+<ul>
+  <li>Sprawdź <i>Ustawienia Windows → Personalizacja → Start → „Pokaż ostatnio otwierane elementy…”</i>.</li>
+  <li>Niektóre programy nie zgłaszają plików do listy Windows (np. VS Code prowadzi własną listę) — ich plików w historii nie będzie, ale czas w programie się liczy.</li>
+  <li>Kliknij <b>Odśwież teraz</b> na dole panelu bocznego.</li>
+</ul>
+<h3>Czas trafia do programu, a nie do pliku</h3>
+<p>Czas przypisuje się do pliku, gdy jego nazwa jest w tytule okna i plik jest już w historii. Nowsze wersje Photoshopa często nie pokazują nazwy pliku w tytule — wtedy liczy się tylko czas w programie.</p>
+<h3>Czas pracy się nie liczy</h3>
+<ul>
+  <li>Ślad musi być uruchomiony (włącz „Uruchamiaj z Windows”).</li>
+  <li>Sprawdź, czy w Ustawieniach jest włączone <b>Śledź aktywne okno</b> i czy program nie jest na liście <b>Pomijanych programów</b>.</li>
+  <li>Po 2 minutach bez myszy i klawiatury Ślad pokazuje „Przerwa” — to celowe. Okno samego Ślad też nie jest liczone.</li>
+</ul>
+<h3>Plik pokazuje „Podłącz: …”</h3>
+<p>Plik jest na odłączonym dysku. Po podłączeniu dysku Ślad odnajdzie go w ciągu kilku sekund, nawet jeśli dysk dostał inną literę.</p>
+<h3>Ślad startuje powoli</h3>
+<p>Przy pierwszym sprawdzaniu dysków uśpiony dysk potrafi budzić się kilkanaście sekund. Aplikacja w tym czasie działa normalnie; pliki z tego dysku nie są wtedy oznaczane jako odłączone.</p>
+<h3>Nie pojawiają się powiadomienia</h3>
+<ul>
+  <li>Kliknij <b>Wyślij powiadomienie testowe</b> w Ustawieniach.</li>
+  <li>Sprawdź <i>Ustawienia Windows → System → Powiadomienia</i>: czy powiadomienia są włączone dla „Ślad” i czy nie jest włączony tryb „Nie przeszkadzać”.</li>
+  <li>Powiadomienia działają tylko wtedy, gdy Ślad jest uruchomiony.</li>
+</ul>
+<h3>Nie widać stron z Chrome</h3>
+<p>Sprawdź przełącznik w Ustawieniach i listę pomijanych serwisów. Nowe strony są dopisywane co kilka minut albo po kliknięciu <b>Odśwież teraz</b>.</p>
+<h3>Google: błąd</h3>
+<ul>
+  <li><b>„Dostęp do Google wygasł albo został cofnięty”</b> — kliknij <b>Połącz z Google</b> ponownie.</li>
+  <li><b>„Włącz Google Tasks API”</b> — włącz to API w konsoli Google Cloud (Biblioteka), odczekaj kilka minut.</li>
+  <li><b>„Google nie rozpoznaje identyfikatora klienta”</b> — sprawdź identyfikator i tajny klucz; nowy klient w Google może zacząć działać dopiero po kilku minutach.</li>
+  <li><b>„Brak połączenia z Google”</b> — brak internetu; Ślad spróbuje ponownie sam.</li>
+</ul>
+</section>
+
+<section id="about">
+<h2>O programie</h2>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.7.0</b>.</p>
+
+<ul>
+  <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
+  <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/instrukcja.html">Instrukcja obsługi w internecie</a></li>
+  <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/polityka-prywatnosci.html">Polityka prywatności</a></li>
+</ul>
+</section>
+    </main>
+    <footer>Ta sama instrukcja jest dostępna w aplikacji: przycisk „?” na dole panelu bocznego albo klawisz F1.</footer>
+  </div>
+</body>
+</html>
