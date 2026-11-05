@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.11.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.12.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -314,11 +314,22 @@
     <tr><td><code>kopie\</code></td><td>kopie zapasowe (pliki <code>Ślad-kopia-….zip</code>)</td></tr>
     <tr><td><code>aktywnosc\RRRR-MM.json</code></td><td>czas pracy (jeden plik na miesiąc)</td></tr>
     <tr><td><code>operacje\RRRR-MM.json</code></td><td>dziennik operacji na plikach (jeden plik na miesiąc, trzymany 12 miesięcy)</td></tr>
+    <tr><td><code>katalog\</code></td><td>spisy śledzonych dysków zewnętrznych (nie trafiają do kopii zapasowych)</td></tr>
     <tr><td><code>miniatury\</code></td><td>miniatury plików, ikony stron i programów</td></tr>
     <tr><td><code>google.json</code></td><td>połączenie z Google (token zaszyfrowany mechanizmem Windows)</td></tr>
   </tbody>
 </table>
 
+<h3>Dyski zewnętrzne i pendrive</h3>
+<p>Przy pierwszym podłączeniu dysku USB Ślad pyta, czy śledzić jego zawartość. <b>Bez Twojej zgody nie zapisuje nic z tego dysku.</b> Wyjątek: foldery na tym dysku, które sam dodałeś do obserwowanych albo do folderów projektów. Decyzję zmienisz w <i>Ustawienia → Dyski zewnętrzne</i>.</p>
+<ul>
+  <li><b>Katalog dysków</b> (filtr w widoku Pliki i szybkie wyszukiwanie): znajdziesz plik także na odłączonym dysku. Spis pokazuje stan z ostatniego sprawdzenia.</li>
+  <li><b>Sprawdzenie</b> przy podłączeniu, co 12 godzin i na żądanie pokazuje w <i>Operacjach na plikach</i>, co przybyło, zniknęło, zmieniło nazwę lub miejsce. Czas zmian bywa przybliżony: to chwila sprawdzenia, a dla nowych plików ich data utworzenia. Jeśli plik zmienił nazwę i treść naraz, wygląda jak usunięty i nowy.</li>
+  <li><b>Kopie</b> między komputerem a dyskiem są rozpoznawane po nazwie, rozmiarze i dacie.</li>
+  <li><b>Bezpieczne odłączanie:</b> Ślad nie trzyma folderów dysku otwartych. Opcja <i>Obserwuj na żywo</i> pokazuje zmiany od razu, ale Windows może wtedy odmawiać odłączenia.</li>
+  <li><b>Spisy</b> zawierają nazwy, ścieżki, rozmiary i daty plików, bez ich zawartości. Leżą w folderze <code>katalog\</code>, nie trafiają do kopii zapasowych, a <i>Usuń spis</i> kasuje je z komputera.</li>
+</ul>
+<p>Telefonów i aparatów podłączonych jako urządzenia multimedialne Ślad nie widzi, bo nie mają litery dysku. Pendrive nie ma Kosza, więc usunięcie z niego jest od razu trwałe.</p>
 <h3>Kopie zapasowe</h3>
 <p>Ślad sam robi kopię <b>raz dziennie</b> (minutę po pierwszym uruchomieniu w danym dniu) i <b>przed każdą aktualizacją</b> do nowej wersji. Kopia to jeden plik <code>.zip</code> z historią, zadaniami, czasem pracy i dziennikiem operacji na plikach — Windows otwiera go jak zwykły folder. Nie ma w niej miniatur (Ślad odtworzy je sam) ani połączenia z Google (po przywróceniu wystarczy kliknąć <i>Połącz z Google</i>).</p>
 <p>Zostają kopie z <b>7 ostatnich dni, 4 tygodni i 12 miesięcy</b> — ok. 20 plików po mniej niż 1 MB. Starsze usuwają się same.</p>
@@ -373,7 +384,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.11.0</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.12.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
