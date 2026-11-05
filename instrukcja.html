@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.10.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.11.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -91,6 +91,15 @@
 <section id="files">
 <h2>Pliki</h2>
 <p>Widok <b>Pliki</b> pokazuje historię otwieranych plików ze wszystkich dysków (także zewnętrznych) oraz odwiedzanych stron z Google Chrome, pogrupowaną po dniach.</p>
+<h3>Operacje na plikach</h3>
+<p>Filtr <b>Operacje na plikach</b> w sekcji Rodzaj pokazuje dziennik: co skopiowano lub przeniesiono, które pliki i foldery zmieniły nazwę i co usunięto (do Kosza albo na stałe) na Pulpicie, w Dokumentach, Pobranych i folderach projektów. Te same wpisy są na Linii czasu. Masowa operacja to jeden wpis z listą plików.</p>
+<ul>
+  <li><b>Kopie to wniosek:</b> Windows zgłasza tylko nowy plik, więc Ślad szuka takiej samej nazwy, rozmiaru i daty. Kopia pod inną nazwą albo z pendrive'a wygląda jak nowy plik i nie jest odnotowana.</li>
+  <li><b>Nowe pliki nie są odnotowywane</b>, tak samo pliki robocze programów (np. tymczasowe pliki Worda, autozapisy SketchUpa).</li>
+  <li><b>Ślad musi działać.</b> Gdy jest wyłączony, widać potem tylko usunięcia do Kosza.</li>
+  <li><b>Nie wiadomo, kto to zrobił:</b> Ty czy program. Windows tego nie mówi.</li>
+</ul>
+<p>Po zmianie nazwy lub przeniesieniu plik zostaje tą samą pozycją w historii, z czasem pracy i otwarciami. <b>×</b> przy wpisie usuwa go z dziennika, sam plik zostaje bez zmian. Wyłącznik i foldery pomijane są w <i>Ustawieniach</i>.</p>
 <h3>Filtrowanie i wyszukiwanie</h3>
 <ul>
   <li><b>Kiedy</b> — dziś, 7 dni, 30 dni albo wszystko.</li>
@@ -304,13 +313,14 @@
     <tr><td><code>zadania.json</code></td><td>zadania i zlecenia</td></tr>
     <tr><td><code>kopie\</code></td><td>kopie zapasowe (pliki <code>Ślad-kopia-….zip</code>)</td></tr>
     <tr><td><code>aktywnosc\RRRR-MM.json</code></td><td>czas pracy (jeden plik na miesiąc)</td></tr>
+    <tr><td><code>operacje\RRRR-MM.json</code></td><td>dziennik operacji na plikach (jeden plik na miesiąc, trzymany 12 miesięcy)</td></tr>
     <tr><td><code>miniatury\</code></td><td>miniatury plików, ikony stron i programów</td></tr>
     <tr><td><code>google.json</code></td><td>połączenie z Google (token zaszyfrowany mechanizmem Windows)</td></tr>
   </tbody>
 </table>
 
 <h3>Kopie zapasowe</h3>
-<p>Ślad sam robi kopię <b>raz dziennie</b> (minutę po pierwszym uruchomieniu w danym dniu) i <b>przed każdą aktualizacją</b> do nowej wersji. Kopia to jeden plik <code>.zip</code> z historią, zadaniami i czasem pracy — Windows otwiera go jak zwykły folder. Nie ma w niej miniatur (Ślad odtworzy je sam) ani połączenia z Google (po przywróceniu wystarczy kliknąć <i>Połącz z Google</i>).</p>
+<p>Ślad sam robi kopię <b>raz dziennie</b> (minutę po pierwszym uruchomieniu w danym dniu) i <b>przed każdą aktualizacją</b> do nowej wersji. Kopia to jeden plik <code>.zip</code> z historią, zadaniami, czasem pracy i dziennikiem operacji na plikach — Windows otwiera go jak zwykły folder. Nie ma w niej miniatur (Ślad odtworzy je sam) ani połączenia z Google (po przywróceniu wystarczy kliknąć <i>Połącz z Google</i>).</p>
 <p>Zostają kopie z <b>7 ostatnich dni, 4 tygodni i 12 miesięcy</b> — ok. 20 plików po mniej niż 1 MB. Starsze usuwają się same.</p>
 <p>Wszystko w <i>Ustawienia → Kopie zapasowe</i>:</p>
 <ul>
@@ -363,7 +373,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.10.0</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.11.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
