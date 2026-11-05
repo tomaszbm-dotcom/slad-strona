@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.12.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.13.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -91,6 +91,14 @@
 <section id="files">
 <h2>Pliki</h2>
 <p>Widok <b>Pliki</b> pokazuje historię otwieranych plików ze wszystkich dysków (także zewnętrznych) oraz odwiedzanych stron z Google Chrome, pogrupowaną po dniach.</p>
+<h3>Zaznaczanie wielu pozycji</h3>
+<p>Przycisk <b>Zaznacz</b> na górze włącza pola wyboru. Bez niego: <kbd>Ctrl</kbd>+klik zaznacza pozycję, <kbd>Shift</kbd>+klik zakres, a <kbd>Ctrl</kbd>+<kbd>A</kbd> wszystko, co pasuje do filtrów i wyszukiwania, także to jeszcze niewczytane na liście. Przypięte zaznaczysz tylko pojedynczo.</p>
+<ul>
+  <li><b>Usuń z historii</b> (albo <kbd>Delete</kbd>) usuwa tylko wpisy w Ślad. <b>Pliki na dysku zostają nietknięte</b>, a czas pracy się nie zmienia. Plik wraca do historii, gdy otworzysz go ponownie, a strona, gdy znów ją odwiedzisz.</li>
+  <li>Przez 10 sekund możesz kliknąć <b>Cofnij</b>. Od 100 pozycji Ślad prosi o potwierdzenie drugim kliknięciem.</li>
+  <li><b>Usuń i nie zapisuj</b> pojawia się, gdy zaznaczysz same strony z najwyżej 3 serwisów. Znikają wtedy wszystkie strony tych serwisów, a kolejne wizyty nie są zapisywane. Lista jest w <i>Ustawienia → Pomijane serwisy</i>.</li>
+</ul>
+<p>To samo działa w <i>Operacjach na plikach</i>: tam usuwasz wpisy z dziennika.</p>
 <h3>Operacje na plikach</h3>
 <p>Filtr <b>Operacje na plikach</b> w sekcji Rodzaj pokazuje dziennik: co skopiowano lub przeniesiono, które pliki i foldery zmieniły nazwę i co usunięto (do Kosza albo na stałe) na Pulpicie, w Dokumentach, Pobranych i folderach projektów oraz w folderach, które dodasz przyciskiem <i>Dodaj folder…</i> w Ustawieniach. Te same wpisy są na Linii czasu. Masowa operacja to jeden wpis z listą plików.</p>
 <ul>
@@ -293,6 +301,9 @@
     <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>4</kbd></td><td>Pliki, Linia czasu, Statystyki, Zadania</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Szukaj w plikach</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td>Nowe zadanie</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+klik, <kbd>Shift</kbd>+klik</td><td>Zaznacz pozycję, zakres pozycji (widok Pliki, Operacje)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Zaznacz wszystko, co pasuje do filtrów</td></tr>
+    <tr><td><kbd>Delete</kbd></td><td>Usuń zaznaczone z historii (pliki na dysku zostają)</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>,</kbd></td><td>Ustawienia</td></tr>
     <tr><td><kbd>Esc</kbd></td><td>Zamknij okno lub panel, wyczyść wyszukiwanie</td></tr>
     <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Poprzedni / następny dzień na linii czasu</td></tr>
@@ -384,7 +395,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.12.0</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.13.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
