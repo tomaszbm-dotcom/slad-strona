@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.15.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.16.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -363,6 +363,15 @@
   <li><b>Spisy</b> zawierają nazwy, ścieżki, rozmiary i daty plików, bez ich zawartości. Leżą w folderze <code>katalog\</code>, nie trafiają do kopii zapasowych, a <i>Usuń spis</i> kasuje je z komputera.</li>
 </ul>
 <p>Telefonów i aparatów podłączonych jako urządzenia multimedialne Ślad nie widzi, bo nie mają litery dysku. Pendrive nie ma Kosza, więc usunięcie z niego jest od razu trwałe.</p>
+<h3>Drugi komputer</h3>
+<p>Ślad możesz zainstalować także na innym komputerze z Windows. Każdy komputer śledzi własną pracę i ma <b>własne dane</b>: historia plików i czas pracy nie łączą się między komputerami.</p>
+<ul>
+  <li><b>Po połączeniu z tym samym kontem Google</b> wspólne są zadania z terminem (kalendarz „Ślad”) i listy zadań Google. Zlecenie z innego komputera przychodzi jako zwykłe zadanie, a przypomnienia działają na obu komputerach. Zadanie usunięte na jednym komputerze na drugim zostaje, tylko bez terminu.</li>
+  <li><b>Client ID i Client secret</b> trzeba wpisać na każdym komputerze. Znajdziesz je w konsoli Google Cloud, a połączenia nie da się przenieść razem z kopią, bo jest zaszyfrowane pod dany komputer.</li>
+  <li><b>Kopie zapasowe</b> mogą iść do tego samego folderu na Dysku Google: każdy komputer ma tam własny podfolder.</li>
+  <li><b>Przenoszenie:</b> <i>Przywróć z pliku…</i> na nowym komputerze zastępuje jego dane danymi z kopii. Użyj tego tylko przy zmianie komputera, a nie przy pracy na dwóch naraz.</li>
+</ul>
+<p>Aktualizacja to uruchomienie nowszego instalatora: dane zostają. Odinstalujesz w <i>Ustawienia Windows → Aplikacje</i>; dane w <code>%APPDATA%\Ślad</code> również zostają.</p>
 <h3>Kopie zapasowe</h3>
 <p>Ślad sam robi kopię <b>raz dziennie</b> (minutę po pierwszym uruchomieniu w danym dniu) i <b>przed każdą aktualizacją</b> do nowej wersji. Kopia to jeden plik <code>.zip</code> z historią, zadaniami, czasem pracy i dziennikiem operacji na plikach — Windows otwiera go jak zwykły folder. Nie ma w niej miniatur (Ślad odtworzy je sam) ani połączenia z Google (po przywróceniu wystarczy kliknąć <i>Połącz z Google</i>).</p>
 <p>Zostają kopie z <b>7 ostatnich dni, 4 tygodni i 12 miesięcy</b> — ok. 20 plików po mniej niż 1 MB. Starsze usuwają się same.</p>
@@ -417,7 +426,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.15.0</b>.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.16.0</b>.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
