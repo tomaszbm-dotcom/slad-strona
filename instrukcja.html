@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.26.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.27.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -56,6 +56,7 @@
         <li><a href="#stats">Statystyki</a></li>
         <li><a href="#tasks">Zadania i zlecenia</a></li>
         <li><a href="#projects">Projekty i zlecenia</a></li>
+        <li><a href="#notes">Notatki</a></li>
         <li><a href="#google">Kalendarz Google</a></li>
         <li><a href="#quick">Szybkie wyszukiwanie</a></li>
         <li><a href="#settings">Ustawienia</a></li>
@@ -84,6 +85,7 @@
   <li><a href="#stats">Statystyki</a> <kbd>Ctrl</kbd>+<kbd>3</kbd> — czas w programach, projektach, dniach i godzinach,</li>
   <li><b>Przegląd dnia</b> <kbd>Ctrl</kbd>+<kbd>0</kbd> — wszystko na start dnia: zadania na dziś i po terminie (kwadracik odhacza zadanie), kalendarz, poczta czekająca na odpowiedź, czas pracy dziś i wczoraj według klientów, ostatnio otwierane pliki. Pokazuje się po uruchomieniu; w <i>Ustawieniach → Ogólne → Start</i> można wrócić do startu od ostatniego widoku.</li>
   <li><a href="#tasks">Zadania</a> <kbd>Ctrl</kbd>+<kbd>4</kbd> — zadania i zlecenia z terminami.</li>
+  <li><a href="#notes">Notatki</a> <kbd>Ctrl</kbd>+<kbd>7</kbd> — pomysły i notatki, także o klientach i kontaktach.</li>
   <li><a href="#google">Poczta</a> <kbd>Ctrl</kbd>+<kbd>5</kbd> — tylko gdy połączysz pocztę Gmail z konta Google: nagłówki wiadomości i te, które czekają na odpowiedź.</li>
   <li><a href="#google">Kontakty</a> <kbd>Ctrl</kbd>+<kbd>6</kbd> — tylko gdy połączysz kontakty z konta Google: osoby, telefony, adresy, ostatni kontakt.</li>
 </ul>
@@ -243,6 +245,22 @@
 <div class="tip">Czas trafia do pliku (i projektu), gdy nazwa pliku z historii jest w tytule okna programu. Większość programów tak robi; wyjątki opisuje <a href="#problems">Rozwiązywanie problemów</a>.</div>
 </section>
 
+<section id="notes">
+<h2>Notatki</h2>
+<p>Notatnik na pomysły, ustalenia i wszystko, co warto zapisać. Przycisk <b>Notatki</b> w sekcji głównej albo <kbd>Ctrl</kbd>+<kbd>7</kbd>.</p>
+<ul>
+  <li><b>+ Notatka</b> tworzy nową. Pola: <b>Temat</b> (np. „Pomysły”, „Zakupy” — wpisz albo wybierz z użytych), <b>Tytuł</b> i treść. Wszystko zapisuje się samo w trakcie pisania; przycisk <b>Zapisz</b> (albo <kbd>Ctrl</kbd>+<kbd>S</kbd>) zapisuje od razu i potwierdza. Notatka bez tytułu pokazuje na liście pierwszą linię treści; zupełnie pusta znika po przejściu do innej.</li>
+  <li><b>Sortowanie</b> według daty zmiany, daty i godziny utworzenia, tytułu albo tematu (wtedy notatki są pogrupowane); strzałka obok zmienia kierunek. Lista <b>Wszystkie tematy</b> pokazuje notatki z jednego tematu. Przypięte (📌) są zawsze na górze i pokazują się też w Przeglądzie dnia.</li>
+  <li><b>Wyszukiwanie</b> w tytułach i treści, polskie znaki można pominąć.</li>
+  <li><b>Klient</b> i <b>Kontakt</b> nad treścią przypisują notatkę. Notatki klienta widać w jego podsumowaniu, a notatki kontaktu na jego karcie; w obu miejscach jest też <b>+ Notatka</b>.</li>
+  <li><b>Układ</b>: obok siebie (lista z lewej) albo <b>lista u góry, notatka na dole</b> — wtedy lista jest tabelą z kolumnami Tytuł, Temat, Klient / kontakt, Utworzona, Zmieniona, a kliknięcie nagłówka kolumny sortuje. Przełączniki są na pasku widoku, a domyślny układ wybierzesz w <i>Ustawieniach → Wygląd</i>.</li>
+  <li><b>Podgląd PDF</b> otwiera notatkę jako PDF w przeglądarce PDF Windows (stamtąd też wydruk), <b>Drukuj</b> otwiera okno drukowania, a <b>Zapisz PDF…</b> zapisuje plik we wskazanym miejscu.</li>
+  <li><b>Usuń</b> przenosi notatkę do <b>kosza</b> (na dole listy) na 30 dni; stamtąd można ją przywrócić albo usunąć na stałe.</li>
+  <li>Szybko z dowolnego programu: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd> i wpisz <code># kupić filament PETG</code>, potem Enter. Szybkie wyszukiwanie znajduje też notatki.</li>
+</ul>
+<div class="tip">Notatki są tylko na tym komputerze (plik <code>notatki.json</code>) i w kopiach zapasowych. Nigdzie nie są wysyłane.</div>
+</section>
+
 <section id="google">
 <h2>Kalendarz Google</h2>
 <p>Połączenie z kontem Google jest opcjonalne. Po połączeniu:</p>
@@ -355,7 +373,10 @@
     <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd></td><td><a href="#quick">Szybkie wyszukiwanie</a> — z dowolnego programu (skrót można zmienić)</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd></td><td>Nowe zadanie z dowolnego programu (skrót można zmienić)</td></tr>
     <tr><td><kbd>F1</kbd></td><td>Pomoc (otwiera rozdział bieżącego widoku)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>0</kbd></td><td>Przegląd dnia</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>4</kbd></td><td>Pliki, Linia czasu, Statystyki, Zadania</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>5</kbd>, <kbd>6</kbd></td><td>Poczta, Kontakty (gdy połączone z kontem Google)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>7</kbd></td><td>Notatki</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Szukaj w plikach</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td>Nowe zadanie</td></tr>
     <tr><td><kbd>Ctrl</kbd>+klik, <kbd>Shift</kbd>+klik</td><td>Zaznacz pozycję, zakres pozycji (widok Pliki, Operacje)</td></tr>
@@ -463,7 +484,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.26.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.27.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
