@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.24.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.26.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -82,8 +82,10 @@
   <li><a href="#files">Pliki</a> <kbd>Ctrl</kbd>+<kbd>1</kbd> — historia plików i stron,</li>
   <li><a href="#timeline">Linia czasu</a> <kbd>Ctrl</kbd>+<kbd>2</kbd> — jeden dzień godzina po godzinie,</li>
   <li><a href="#stats">Statystyki</a> <kbd>Ctrl</kbd>+<kbd>3</kbd> — czas w programach, projektach, dniach i godzinach,</li>
+  <li><b>Przegląd dnia</b> <kbd>Ctrl</kbd>+<kbd>0</kbd> — wszystko na start dnia: zadania na dziś i po terminie (kwadracik odhacza zadanie), kalendarz, poczta czekająca na odpowiedź, czas pracy dziś i wczoraj według klientów, ostatnio otwierane pliki. Pokazuje się po uruchomieniu; w <i>Ustawieniach → Ogólne → Start</i> można wrócić do startu od ostatniego widoku.</li>
   <li><a href="#tasks">Zadania</a> <kbd>Ctrl</kbd>+<kbd>4</kbd> — zadania i zlecenia z terminami.</li>
   <li><a href="#google">Poczta</a> <kbd>Ctrl</kbd>+<kbd>5</kbd> — tylko gdy połączysz pocztę Gmail z konta Google: nagłówki wiadomości i te, które czekają na odpowiedź.</li>
+  <li><a href="#google">Kontakty</a> <kbd>Ctrl</kbd>+<kbd>6</kbd> — tylko gdy połączysz kontakty z konta Google: osoby, telefony, adresy, ostatni kontakt.</li>
 </ul>
 <p>Pod przełącznikiem widać, ile czasu pracowałeś dziś i co jest teraz liczone.</p>
 <p>Z dowolnego programu plik, dokument albo zadanie znajdziesz skrótem <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd> — patrz <a href="#quick">Szybkie wyszukiwanie</a>. Zamknięcie okna chowa Ślad do ikony obok zegara, a czas liczy się dalej.</p>
@@ -281,7 +283,16 @@
   <li>na <b>Linii czasu</b>, w godzinie, w której przyszły albo zostały wysłane,</li>
   <li>w <b>podsumowaniu klienta</b> — po wpisaniu jego adresu albo domeny (np. <code>@firma.pl</code>). Poczta nie trafia do zestawienia PDF ani CSV.</li>
 </ul>
-<p><b>Bez odpowiedzi</b> to wiadomości z ostatnich 30 dni wysłane wprost do Ciebie (nie w kopii), na które nie odpisałeś w tym samym wątku. Powiadomienia, newslettery i adresy typu „no-reply” są pomijane. Licznik widać przy przycisku Poczta.</p>
+<h3>Kontakty Google</h3>
+<p>Też osobna zgoda, domyślnie wyłączona i <b>tylko do odczytu</b> — Ślad nie zmienia ani nie usuwa Twoich kontaktów. Najpierw w <code>console.cloud.google.com</code> włącz <b>Google People API</b>, potem <i>Ustawienia → Google → <b>Połącz kontakty</b></i>.</p>
+<ul>
+  <li>Widok <b>Kontakty</b> (<kbd>Ctrl</kbd>+<kbd>6</kbd>): lista z literami alfabetu, wyszukiwanie po imieniu, firmie, adresie e-mail i numerze telefonu (polskie znaki można pominąć), filtry <b>Klienci</b> i <b>Czekają na odpowiedź</b>.</li>
+  <li>Karta kontaktu: <b>Napisz w Gmailu</b>, <b>Zadzwoń</b> (numer trafia do Łącza z telefonem albo innego programu ustawionego w Windows do dzwonienia), <b>Kopiuj</b>, <b>Edytuj w Google</b>, ostatni kontakt mailowy i ostatnie wiadomości.</li>
+  <li><b>Przypisz do klienta</b> dopisuje do klienta domenę firmy (albo sam adres, gdy to skrzynka typu gmail.com). Podsumowanie klienta pokazuje wtedy jego <b>osoby kontaktowe</b>.</li>
+  <li>Przełącznik <b>„Inne kontakty”</b> dodaje adresy, które Gmail zapisał sam z korespondencji (wymaga jednej dodatkowej zgody).</li>
+</ul>
+<p>Kopia kontaktów jest na tym komputerze i odświeża się co 30 minut. Nie trafia do kopii zapasowych. <b>Odłącz kontakty</b> usuwa ją.</p>
+<p><b>Bez odpowiedzi</b> to wiadomości z ostatnich 30 dni wysłane wprost do Ciebie (nie w kopii) <b>od kogoś znanego</b> — do kogo pisałeś, kto jest w Twoich Kontaktach Google albo jest przypisany do klienta — na które nie odpisałeś w tym samym wątku. Sklepy, reklamy, powiadomienia i adresy typu „no-reply” są pomijane. Licznik widać przy przycisku Poczta.</p>
 <div class="tip">Nagłówki zostają na tym komputerze i w kopiach zapasowych. <b>Odłącz pocztę</b> usuwa wszystko, co pobrano. Samo uprawnienie w Google cofniesz przez <b>Rozłącz</b> i ponowne <b>Połącz z Google</b>. W trybie prywatnym poczta nie jest zapisywana.</div>
 </section>
 
@@ -292,6 +303,7 @@
 <h3>Co można znaleźć</h3>
 <ul>
   <li><b>Pliki</b> (po nazwie, ścieżce i dysku), <b>Dokumenty Google</b>, <b>zadania i zlecenia</b>, <b>klientów</b> i <b>strony www</b> (niżej w wynikach).</li>
+  <li><b>Kontakty</b> (po imieniu, firmie, adresie e-mail i numerze telefonu) i <b>Pocztę</b> (po temacie i nadawcy) — gdy są połączone z kontem Google. Enter na kontakcie otwiera jego kartę, na wiadomości otwiera Gmaila; <kbd>Ctrl</kbd>+<kbd>C</kbd> na kontakcie kopiuje numer telefonu.</li>
   <li><b>Polecenia</b>, np. „Nowe zadanie”, „Linia czasu: wczoraj”, „Statystyki”, „Ustawienia”, „Pomoc”, „Synchronizuj z Kalendarzem Google”.</li>
 </ul>
 <p>Bez wpisanego tekstu okno pokazuje <b>ostatnio używane</b> pliki i dokumenty. Wyniki są ułożone tak, że wyżej jest to, co otwierasz często, niedawno i nad czym długo pracowałeś.</p>
@@ -451,7 +463,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.24.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.26.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
