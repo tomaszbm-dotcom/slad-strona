@@ -52,7 +52,8 @@
       <ul>
         <li><b>kalendarz „Ślad”</b> — aplikacja tworzy go na Twoim koncie i zapisuje w nim zadania i zlecenia z terminem; zmiany wprowadzone w Google wracają do aplikacji,</li>
         <li><b>pozostałe kalendarze</b> — aplikacja tylko odczytuje wydarzenia, żeby pokazać je w swoim kalendarzu; nie zmienia ich, nie usuwa i nie zapisuje na dysku,</li>
-        <li><b>listy zadań Google</b> — aplikacja odczytuje je i zapisuje zmiany, które wprowadzisz w Ślad (np. odhaczenie zadania).</li>
+        <li><b>listy zadań Google</b> — aplikacja odczytuje je i zapisuje zmiany, które wprowadzisz w Ślad (np. odhaczenie zadania),</li>
+        <li><b>poczta Gmail (tylko po osobnym włączeniu)</b> — aplikacja korzysta z Gmail API z uprawnieniem do metadanych (<code>gmail.metadata</code>) i odczytuje wyłącznie nadawcę, odbiorców, temat, datę i etykiety wiadomości. Nie ma dostępu do treści ani załączników, niczego nie wysyła, nie zmienia ani nie usuwa w Twojej skrzynce. Nagłówki są zapisywane tylko na Twoim komputerze (i w kopiach zapasowych, które sam wskażesz), żeby pokazać je w historii, na linii czasu i przy klientach. „Odłącz pocztę” usuwa je z komputera.</li>
       </ul>
       <p>Dane z Google są przesyłane tylko między Twoim komputerem a serwerami Google. Token dostępu jest zapisany na Twoim komputerze w postaci zaszyfrowanej mechanizmem Windows. Ślad nie używa danych z Google do żadnych innych celów, nie przekazuje ich osobom trzecim i nie używa ich do reklam ani do trenowania modeli sztucznej inteligencji.</p>
       <p>Sposób korzystania z informacji otrzymanych z interfejsów API Google jest zgodny z <a href="https://developers.google.com/terms/api-services-user-data-policy">Zasadami dotyczącymi danych użytkownika w usługach interfejsów API Google</a>, w tym z wymogami ograniczonego użytkowania (Limited Use).</p>
@@ -61,7 +62,7 @@
     <section>
       <h2>Jak cofnąć dostęp do Google</h2>
       <ul>
-        <li>w aplikacji: Ustawienia → Kalendarz Google → <b>Rozłącz</b> (unieważnia też token po stronie Google),</li>
+        <li>w aplikacji: Ustawienia → Google → <b>Rozłącz</b> (unieważnia też token po stronie Google i usuwa pobrane nagłówki poczty),</li>
         <li>albo na stronie <a href="https://myaccount.google.com/permissions">uprawnień konta Google</a>.</li>
       </ul>
       <p>Kalendarz „Ślad” zostaje wtedy na Twoim koncie Google — możesz go usunąć w ustawieniach Kalendarza Google.</p>
