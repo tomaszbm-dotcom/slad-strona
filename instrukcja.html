@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.22.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.23.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -99,6 +99,8 @@
   <li><b>Usuń i nie zapisuj</b> pojawia się, gdy zaznaczysz same strony z najwyżej 3 serwisów. Znikają wtedy wszystkie strony tych serwisów, a kolejne wizyty nie są zapisywane. Lista jest w <i>Ustawienia → Pomijane serwisy</i>.</li>
 </ul>
 <p>To samo działa w <i>Operacjach na plikach</i>: tam usuwasz wpisy z dziennika.</p>
+<h3>Ostatnie pliki z programów</h3>
+<p>Niektóre programy (np. SketchUp, CorelDRAW, VS Code) prowadzą własne listy ostatnich plików i nie zawsze zgłaszają je do Windows. Ślad czyta te listy co 3 minuty i dopisuje pliki do historii. Listy nie mają dat, więc przy pierwszym odczycie plik dostaje datę ostatniej zmiany, a później godzinę, o której pojawił się na górze listy. Wyłączysz to w <i>Ustawienia → Ogólne</i>.</p>
 <h3>Operacje na plikach</h3>
 <p>Filtr <b>Operacje na plikach</b> w sekcji Rodzaj pokazuje dziennik: co skopiowano lub przeniesiono, które pliki i foldery zmieniły nazwę i co usunięto (do Kosza albo na stałe) na Pulpicie, w Dokumentach, Pobranych i folderach projektów oraz w folderach, które dodasz przyciskiem <i>Dodaj folder…</i> w Ustawieniach. Te same wpisy są na Linii czasu. Masowa operacja to jeden wpis z listą plików.</p>
 <ul>
@@ -146,6 +148,9 @@
   <li>Puste godziny są łączone w jeden wiersz „brak aktywności”.</li>
   <li>Nad dniem widać <b>Terminy</b> zadań oraz wydarzenia z Twoich kalendarzy Google.</li>
 </ul>
+<h3>Tryb prywatny</h3>
+<p>Gdy tryb jest włączony, widać to od razu: u góry okna jest fioletowy pasek z godziną końca i przyciskiem <b>Wznów zapisywanie</b>, okno ma fioletową ramkę, a ikona Śladu obok zegara pokazuje przekreślone oko (przy fioletowym kolorze akcentu pasek i ramka są bursztynowe).</p>
+<p><b>Tryb prywatny</b> w panelu bocznym (pod czasem dzisiaj) albo w menu ikony obok zegara wstrzymuje wszystko na 30 minut, godzinę, 2 godziny albo do odwołania: czas pracy, dziennik operacji na plikach, historię plików i stron. Strony odwiedzone w tym czasie nie trafią do historii także później, przy odczycie przeglądarki. Na Linii czasu widać tylko, że tryb był włączony. <b>Wznów</b> kończy go od razu.</p>
 <h3>Poprawianie czasu</h3>
 <ul>
   <li><b>Kliknij pasek godziny</b>, żeby rozwinąć listę okien, a potem <b>ołówek</b> przy odcinku. Możesz zmienić godziny, wskazać zlecenie lub projekt albo wybrać <b>Nie licz</b>.</li>
@@ -224,6 +229,8 @@
   <li>Minuty są zaokrąglane dla każdego dnia, a sumy liczone z tych wartości, żeby wszystko się dodawało. Wynik może różnić się o kilka minut od sumy w aplikacji.</li>
   <li>CSV jest przygotowany dla polskiego Excela. Przed wysłaniem możesz <a href="#timeline">poprawić czas na Linii czasu</a>.</li>
 </ul>
+<h3>Stawka godzinowa</h3>
+<p>W podsumowaniu klienta wpisz <b>stawkę godzinową</b> (zł za godzinę). Jest zapamiętywana dla tego klienta. Zestawienie PDF i CSV pokaże wtedy kwotę przy każdym dniu i zleceniu oraz sumę. Kwoty liczone są z zaokrąglonych minut, więc wszystko się sumuje co do grosza. Puste pole: zestawienie bez kwot.</p>
 <h3>Reguły czasu pracy</h3>
 <p>Gdy program nie pokazuje nazwy pliku w tytule okna, czas nie trafia do żadnego projektu. <b>Regułą</b> w <i>Ustawieniach</i> powiesz Ślad, dokąd go liczyć: program i/lub fragment tytułu okna → zlecenie albo projekt. Podobną regułę utworzysz też w oknie poprawki odcinka na Linii czasu.</p>
 <ul>
@@ -429,7 +436,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.22.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.23.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
