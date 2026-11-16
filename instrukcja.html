@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.30.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.31.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -264,14 +264,18 @@
 
 <section id="calendar">
 <h2>Kalendarz</h2>
-<p>Własny kalendarz na spotkania i wydarzenia. Przycisk <b>Kalendarz</b> w sekcji głównej albo <kbd>Ctrl</kbd>+<kbd>8</kbd>. Jeśli go nie widać, włącz go w <i>Ustawieniach → Kalendarz</i>.</p>
+<p>Kalendarz na spotkania i wydarzenia. Przycisk <b>Kalendarz</b> w sekcji głównej albo <kbd>Ctrl</kbd>+<kbd>8</kbd>.</p>
+<p>W wersji połączonej z kontem Google widok Kalendarz pokazuje <b>Twoje kalendarze Google</b>: wszystko, co dodasz, przesuniesz, zmienisz albo usuniesz w Ślad, od razu trafia do Google (więc też do telefonu), a zmiany z telefonu pojawiają się w Ślad w ciągu kilku minut. Przycisk pojawia się po połączeniu z Google.</p>
+<p>Za pierwszym razem nad kalendarzem jest przycisk <b>Zezwól na zmiany</b> — Google raz zapyta o zgodę na zmianę wydarzeń w Twoich kalendarzach. Wcześniej trzeba ją dodać w Google Cloud (Google Auth Platform → Data Access → zakres <code>calendar.events</code>), tak jak przy poczcie.</p>
 <h3>Widoki</h3>
 <ul>
   <li><b>Dzień</b>, <b>Tydzień</b> i <b>Miesiąc</b> — przełącznik na pasku (albo klawisze <kbd>D</kbd>, <kbd>W</kbd>, <kbd>M</kbd>). Strzałki ‹ › (albo <kbd>←</kbd> <kbd>→</kbd>) przechodzą dalej, <b>Dziś</b> (<kbd>T</kbd>) wraca do dzisiaj, a pole daty przenosi do dowolnego dnia.</li>
   <li>Tydzień zaczyna się w poniedziałek. W widoku dnia i tygodnia od razu widać godziny dnia (domyślnie 7:00–20:00, do zmiany w Ustawieniach); resztę doby po przewinięciu. Czerwona linia to „teraz”.</li>
   <li>Kliknięcie nazwy dnia albo numeru dnia w miesiącu otwiera widok tego dnia. „+N więcej” pokazuje wszystkie wydarzenia dnia.</li>
   <li><b>Zadania</b> z terminem też są w kalendarzu (z kółkiem, przerywaną ramką); kliknięcie otwiera zadanie. Pole <b>Zadania</b> na pasku je chowa.</li>
-  <li>Wydarzenia z innych kalendarzy Google widać obok, tylko do odczytu.</li>
+  <li>Kalendarze Google, w których nie masz prawa zmian (np. święta), i zaproszenia od innych osób są tylko do odczytu: kliknięcie pokazuje szczegóły, gości, link do Meet i <b>Otwórz w Kalendarzu Google</b>. Własne spotkania z gośćmi możesz zmieniać — Ślad nie wysyła wtedy gościom powiadomień.</li>
+  <li>Nowe wydarzenie z Google trafia do głównego kalendarza albo do wybranego w polu <b>Kalendarz</b> (Ślad pamięta ostatni wybór). Kolory są takie jak w Google; pierwsze, puste kółko oznacza kolor kalendarza.</li>
+  <li>Bez internetu widać ostatnio pobrane wydarzenia z Google, a zmiany są zablokowane do powrotu połączenia.</li>
 </ul>
 <h3>Dodawanie i zmiana</h3>
 <ul>
@@ -287,13 +291,15 @@
 </ul>
 <h3>Przypomnienia i reszta Ślad</h3>
 <ul>
+  <li>Przy kalendarzach Google przypomnienie zapisuje się w wydarzeniu, więc przypomni też telefon; Ślad dodatkowo pokazuje powiadomienie Windows (można to wyłączyć w <i>Ustawieniach → Kalendarz</i>). Niestandardowe powtarzanie utworzone w Google (np. „pierwszy poniedziałek miesiąca”) zmienisz tylko w Google.</li>
   <li>Przypomnienie to powiadomienie Windows, domyślnie 15 minut przed (domyślną wartość zmienisz w <i>Ustawieniach → Kalendarz</i>). Dla wydarzeń całodniowych: o 9:00 tego dnia albo dzień, dwa dni lub tydzień wcześniej. Kliknięcie powiadomienia otwiera wydarzenie. Działa, gdy powiadomienia są włączone (<i>Ustawienia → Ogólne</i>) i Ślad działa, także w tle.</li>
   <li>Dzisiejsze wydarzenia są w <b>Przeglądzie dnia</b>, a wydarzenia dnia w <b>Podsumowaniu dnia</b> i jego PDF.</li>
   <li>Wydarzenia przypisane do <b>klienta</b> widać w jego podsumowaniu (najbliższe i ostatnie spotkania).</li>
   <li><b>Szybkie wyszukiwanie</b> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd>) znajduje wydarzenia po tytule, opisie i kliencie.</li>
-  <li><b>Usuń</b> przenosi wydarzenie do kosza na 30 dni; przywrócisz je w <i>Ustawieniach → Kalendarz</i>.</li>
+  <li><b>Usuń</b> przenosi wydarzenie lokalnego kalendarza do kosza na 30 dni; przywrócisz je w <i>Ustawieniach → Kalendarz</i>.</li>
+  <li>Wydarzenie usunięte z kalendarza Google jest przez 30 dni w koszu Kalendarza Google (w przeglądarce).</li>
 </ul>
-<div class="tip">Kalendarz jest tylko na tym komputerze (plik <code>kalendarz.json</code>) i w kopiach zapasowych. Nigdzie nie jest wysyłany.</div>
+<div class="tip">Lokalny kalendarz Ślad jest tylko na tym komputerze (plik <code>kalendarz.json</code>) i w kopiach zapasowych. Nigdzie nie jest wysyłany.</div>
 </section>
 
 <section id="google">
@@ -522,7 +528,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.30.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.31.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>

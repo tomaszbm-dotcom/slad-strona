@@ -48,10 +48,11 @@
 
     <section>
       <h2>Dane z konta Google</h2>
-      <p>Połączenie z kontem Google jest opcjonalne i wymaga Twojej zgody na stronie Google. Ślad korzysta z interfejsów Google Calendar API i Google Tasks API wyłącznie po to, żeby synchronizować Twoje zadania:</p>
+      <p>Połączenie z kontem Google jest opcjonalne i wymaga Twojej zgody na stronie Google. Ślad korzysta z interfejsów Google Calendar API i Google Tasks API wyłącznie po to, żeby synchronizować Twoje zadania i pokazywać Twoje kalendarze w widoku Kalendarz:</p>
       <ul>
         <li><b>kalendarz „Ślad”</b> — aplikacja tworzy go na Twoim koncie i zapisuje w nim zadania i zlecenia z terminem; zmiany wprowadzone w Google wracają do aplikacji,</li>
-        <li><b>pozostałe kalendarze</b> — aplikacja tylko odczytuje wydarzenia, żeby pokazać je w swoim kalendarzu; nie zmienia ich, nie usuwa i nie zapisuje na dysku,</li>
+        <li><b>pozostałe kalendarze</b> — aplikacja odczytuje wydarzenia, żeby pokazać je w widoku Kalendarz. Kopia wydarzeń z ostatnio oglądanych tygodni jest zapisywana tylko na Twoim komputerze (nie trafia do kopii zapasowych), żeby kalendarz działał bez internetu i żeby przypominać o wydarzeniach; „Rozłącz” ją usuwa,</li>
+        <li><b>zmiany wydarzeń (tylko po osobnym włączeniu)</b> — po kliknięciu „Zezwól na zmiany” aplikacja korzysta z uprawnienia <code>calendar.events</code> wyłącznie po to, żeby wykonać w Google zmiany, które sam zrobisz w Ślad: dodanie, przesunięcie, edycję lub usunięcie wydarzenia. Nie wysyła powiadomień do gości. Przypisanie wydarzenia do klienta zapisuje jako ukrytą informację w tym wydarzeniu, widoczną tylko dla Ślad,</li>
         <li><b>listy zadań Google</b> — aplikacja odczytuje je i zapisuje zmiany, które wprowadzisz w Ślad (np. odhaczenie zadania),</li>
         <li><b>poczta Gmail (tylko po osobnym włączeniu)</b> — aplikacja korzysta z Gmail API z uprawnieniem do metadanych (<code>gmail.metadata</code>) i odczytuje wyłącznie nadawcę, odbiorców, temat, datę i etykiety wiadomości. Nie ma dostępu do treści ani załączników, niczego nie wysyła, nie zmienia ani nie usuwa w Twojej skrzynce. Nagłówki są zapisywane tylko na Twoim komputerze (i w kopiach zapasowych, które sam wskażesz), żeby pokazać je w historii, na linii czasu i przy klientach. „Odłącz pocztę” usuwa je z komputera.</li>
         <li><b>kontakty Google (tylko po osobnym włączeniu)</b> — aplikacja korzysta z Google People API wyłącznie do odczytu (<code>contacts.readonly</code>, a po dodatkowym włączeniu także <code>contacts.other.readonly</code> dla „Innych kontaktów”). Odczytuje imię i nazwisko, firmę i stanowisko, adresy e-mail, numery telefonów, adres i notatkę. Nie zmienia, nie dodaje i nie usuwa kontaktów. Kopia jest zapisywana tylko na Twoim komputerze (nie trafia do kopii zapasowych), żeby pokazać kontakty w aplikacji i powiązać je z pocztą i klientami. „Odłącz kontakty” usuwa ją z komputera.</li>
@@ -63,7 +64,7 @@
     <section>
       <h2>Jak cofnąć dostęp do Google</h2>
       <ul>
-        <li>w aplikacji: Ustawienia → Google → <b>Rozłącz</b> (unieważnia też token po stronie Google i usuwa pobrane nagłówki poczty oraz kopię kontaktów),</li>
+        <li>w aplikacji: Ustawienia → Google → <b>Rozłącz</b> (unieważnia też token po stronie Google i usuwa pobrane nagłówki poczty, kopię kontaktów i kopię wydarzeń z kalendarzy),</li>
         <li>albo na stronie <a href="https://myaccount.google.com/permissions">uprawnień konta Google</a>.</li>
       </ul>
       <p>Kalendarz „Ślad” zostaje wtedy na Twoim koncie Google — możesz go usunąć w ustawieniach Kalendarza Google.</p>
