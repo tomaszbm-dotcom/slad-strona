@@ -45,7 +45,7 @@
       <img src="icon.png" alt="" />
       <div>
         <h1>Instrukcja obsługi Ślad</h1>
-        <p>wersja 0.28.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
+        <p>wersja 0.30.0 · <a href="index.html">strona aplikacji</a> · <a href="polityka-prywatnosci.html">polityka prywatności</a></p>
       </div>
     </header>
     <nav>
@@ -57,6 +57,7 @@
         <li><a href="#tasks">Zadania i zlecenia</a></li>
         <li><a href="#projects">Projekty i zlecenia</a></li>
         <li><a href="#notes">Notatki</a></li>
+        <li><a href="#calendar">Kalendarz</a></li>
         <li><a href="#google">Kalendarz Google</a></li>
         <li><a href="#quick">Szybkie wyszukiwanie</a></li>
         <li><a href="#settings">Ustawienia</a></li>
@@ -118,7 +119,7 @@
 <h3>Filtrowanie i wyszukiwanie</h3>
 <ul>
   <li><b>Kiedy</b> — dziś, 7 dni, 30 dni albo wszystko.</li>
-  <li><b>Rodzaj</b> — SketchUp, CorelDRAW, Photoshop, kod, obrazy, dokumenty, strony www i inne. Przy „Strony www” pojawia się dodatkowo lista serwisów.</li>
+  <li><b>Rodzaj</b> — SketchUp, CorelDRAW, Photoshop, kod, obrazy, dokumenty, strony www i inne. Przy „Strony www” pojawia się dodatkowo lista serwisów. Ikonka oka przy rodzaju ukrywa go w „Wszystkie” i „Przypięte” (np. wszystko poza stronami www); link <i>pokaż wszystkie</i> przy tytule przywraca ukryte.</li>
   <li><b>Dyski</b> — zielona kropka oznacza dysk podłączony. Ikoną ✎ nadasz dyskowi własną nazwę.</li>
   <li><b>Szukaj</b> (<kbd>Ctrl</kbd>+<kbd>F</kbd>) — po nazwie, ścieżce i adresie. Kilka słów naraz zawęża wynik. <kbd>Esc</kbd> czyści pole.</li>
   <li><b>Sortowanie</b> — ostatnio otwierane, najczęściej otwierane, najdłużej używane albo nazwa.</li>
@@ -261,6 +262,40 @@
 <div class="tip">Notatki są tylko na tym komputerze (plik <code>notatki.json</code>) i w kopiach zapasowych. Nigdzie nie są wysyłane.</div>
 </section>
 
+<section id="calendar">
+<h2>Kalendarz</h2>
+<p>Własny kalendarz na spotkania i wydarzenia. Przycisk <b>Kalendarz</b> w sekcji głównej albo <kbd>Ctrl</kbd>+<kbd>8</kbd>. Jeśli go nie widać, włącz go w <i>Ustawieniach → Kalendarz</i>.</p>
+<h3>Widoki</h3>
+<ul>
+  <li><b>Dzień</b>, <b>Tydzień</b> i <b>Miesiąc</b> — przełącznik na pasku (albo klawisze <kbd>D</kbd>, <kbd>W</kbd>, <kbd>M</kbd>). Strzałki ‹ › (albo <kbd>←</kbd> <kbd>→</kbd>) przechodzą dalej, <b>Dziś</b> (<kbd>T</kbd>) wraca do dzisiaj, a pole daty przenosi do dowolnego dnia.</li>
+  <li>Tydzień zaczyna się w poniedziałek. W widoku dnia i tygodnia od razu widać godziny dnia (domyślnie 7:00–20:00, do zmiany w Ustawieniach); resztę doby po przewinięciu. Czerwona linia to „teraz”.</li>
+  <li>Kliknięcie nazwy dnia albo numeru dnia w miesiącu otwiera widok tego dnia. „+N więcej” pokazuje wszystkie wydarzenia dnia.</li>
+  <li><b>Zadania</b> z terminem też są w kalendarzu (z kółkiem, przerywaną ramką); kliknięcie otwiera zadanie. Pole <b>Zadania</b> na pasku je chowa.</li>
+  <li>Wydarzenia z innych kalendarzy Google widać obok, tylko do odczytu.</li>
+</ul>
+<h3>Dodawanie i zmiana</h3>
+<ul>
+  <li><b>+ Wydarzenie</b> (albo <kbd>N</kbd>) dodaje nowe. Szybciej: <b>przeciągnij myszą</b> w siatce dnia lub tygodnia od godziny początku do godziny końca. Samo kliknięcie w siatce daje wydarzenie na godzinę, a kliknięcie w wierszu „cały dzień” albo w pustym polu miesiąca — wydarzenie w tym dniu.</li>
+  <li>Kliknięcie wydarzenia otwiera je w panelu z prawej: tytuł, <b>Cały dzień</b>, od–do (także kilka dni), <b>Powtarzaj</b>, <b>Przypomnienie</b>, <b>Klient</b>, kolor i opis. <b>Zapisz</b> albo <kbd>Ctrl</kbd>+<kbd>S</kbd>, <kbd>Esc</kbd> zamyka bez zapisu.</li>
+  <li><b>Przesuwanie</b>: chwyć wydarzenie i przeciągnij na inną godzinę albo inny dzień. <b>Długość</b>: przeciągnij jego dolną krawędź. W widoku miesiąca przeciągnij wydarzenie na inny dzień.</li>
+</ul>
+<h3>Powtarzanie</h3>
+<ul>
+  <li>Codziennie, co tydzień (z wyborem dni, np. pn–pt), co miesiąc (ten sam dzień miesiąca; miesiące bez takiego dnia, np. 31., są pomijane) albo co rok; także co 2, 3… dni, tygodnie, miesiące.</li>
+  <li><b>Koniec</b>: nigdy, w podanym dniu albo po określonej liczbie razy.</li>
+  <li>Przy zmianie, przesunięciu albo usunięciu wydarzenia z serii Ślad pyta: <b>Tylko to wydarzenie</b>, <b>To i następne</b> albo <b>Wszystkie w serii</b>. Zmiana samego powtarzania dotyczy zawsze całej serii albo jej dalszej części.</li>
+</ul>
+<h3>Przypomnienia i reszta Ślad</h3>
+<ul>
+  <li>Przypomnienie to powiadomienie Windows, domyślnie 15 minut przed (domyślną wartość zmienisz w <i>Ustawieniach → Kalendarz</i>). Dla wydarzeń całodniowych: o 9:00 tego dnia albo dzień, dwa dni lub tydzień wcześniej. Kliknięcie powiadomienia otwiera wydarzenie. Działa, gdy powiadomienia są włączone (<i>Ustawienia → Ogólne</i>) i Ślad działa, także w tle.</li>
+  <li>Dzisiejsze wydarzenia są w <b>Przeglądzie dnia</b>, a wydarzenia dnia w <b>Podsumowaniu dnia</b> i jego PDF.</li>
+  <li>Wydarzenia przypisane do <b>klienta</b> widać w jego podsumowaniu (najbliższe i ostatnie spotkania).</li>
+  <li><b>Szybkie wyszukiwanie</b> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Spacja</kbd>) znajduje wydarzenia po tytule, opisie i kliencie.</li>
+  <li><b>Usuń</b> przenosi wydarzenie do kosza na 30 dni; przywrócisz je w <i>Ustawieniach → Kalendarz</i>.</li>
+</ul>
+<div class="tip">Kalendarz jest tylko na tym komputerze (plik <code>kalendarz.json</code>) i w kopiach zapasowych. Nigdzie nie jest wysyłany.</div>
+</section>
+
 <section id="google">
 <h2>Kalendarz Google</h2>
 <p>Połączenie z kontem Google jest opcjonalne. Po połączeniu:</p>
@@ -377,6 +412,7 @@
     <tr><td><kbd>Ctrl</kbd>+<kbd>1</kbd> … <kbd>4</kbd></td><td>Pliki, Linia czasu, Statystyki, Zadania</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>5</kbd>, <kbd>6</kbd></td><td>Poczta, Kontakty (gdy połączone z kontem Google)</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>7</kbd></td><td>Notatki</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>8</kbd></td><td>Kalendarz (gdy włączony); w nim <kbd>D</kbd> / <kbd>W</kbd> / <kbd>M</kbd> — dzień, tydzień, miesiąc, <kbd>T</kbd> — dziś, <kbd>N</kbd> — nowe wydarzenie, <kbd>←</kbd> <kbd>→</kbd> — dalej</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Szukaj w plikach</td></tr>
     <tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td>Nowe zadanie</td></tr>
     <tr><td><kbd>Ctrl</kbd>+klik, <kbd>Shift</kbd>+klik</td><td>Zaznacz pozycję, zakres pozycji (widok Pliki, Operacje)</td></tr>
@@ -486,7 +522,7 @@
 
 <section id="about">
 <h2>O programie</h2>
-<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.28.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
+<p><b>Ślad</b> — historia pracy na Twoim komputerze. Wersja <b>0.30.0</b>. Przycisk <b>i</b> obok numeru wersji pokazuje autora i kontakt.</p>
 
 <ul>
   <li><a href="https://tomaszbm-dotcom.github.io/slad-strona/">Strona aplikacji</a></li>
